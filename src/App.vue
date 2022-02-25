@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+
+const isDrawerOpen = ref(true);
+</script>
 
 <template>
   <q-layout view="hHh lpR fFf">
@@ -7,5 +11,7 @@
         <q-toolbar-title> GitHub Dashboard </q-toolbar-title>
       </q-toolbar>
     </q-header>
+
+    <q-drawer v-model="isDrawerOpen" bordered> </q-drawer>
   </q-layout>
 </template>
